@@ -13,10 +13,10 @@
 </div>
 
 <script>
-    const ratings = document.querySelectorAll('.rating');
-    if(ratings.length > 0) {
-    	initRatings();
-    }
+  const ratings = document.querySelectorAll('.rating');
+  if(ratings.length > 0) {
+  	initRatings();
+  }
     
   function initRatings() {
   	let ratingActive, ratingValue;
@@ -24,19 +24,18 @@
     	const rating = ratings[index];
       initRating(rating);
     }
-
-      function initRating(rating){
-      	initRatingVars(rating);
-      	setRatingActiveWidth();
-      }
-      function initRatingVars(rating){
-      	ratingActive = rating.querySelector('.rating__active');
-      	ratingValue = rating.querySelector('.rating__value');
-      }
-      function setRatingActiveWidth(index = ratingValue.innerHTML){
-        const ratingActiveWidth = index / 0.05;
-        ratingActive.style.width = ratingActiveWidth+'%';
-        
-      }
+    function initRating(rating){
+    	initRatingVars(rating);
+    	setRatingActiveWidth();
+    }
+    function initRatingVars(rating){
+    	ratingActive = rating.querySelector('.rating__active');
+    	ratingValue = rating.querySelector('.rating__value');
+    }
+    function setRatingActiveWidth(index = ratingValue.innerHTML){
+      const ratingActiveWidth = index / 0.05;
+      ratingActive.style.width = ratingActiveWidth+'%';
+      
+    }
   }
 </script>
